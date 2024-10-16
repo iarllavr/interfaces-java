@@ -3,6 +3,8 @@
  * É comumente utilizada para criar ou fornecer novos objetos de um determinado tipo.
  **/
 
+//Incompleto, revisar futuramente
+
 package InterfacesFuncionais;
 
 import java.util.List;
@@ -14,13 +16,17 @@ public class Supplier {
         // Usar o Supplier com expressão lambda para fornecer uma saudação personalizada
         java.util.function.Supplier<String> saudacao = () -> "Olá, seja bem vindo(a)";
 
+
         // Usar o Supplier para obter uma lista com 5 expressões
-        List<String> listaSaudacoes = Stream.generate(saudacao).toList()
-                .stream().limit(3)
-                .toList();
+//        List<String> listaSaudacoes = Stream.generate(
+//                        new Supplier<String>() {
+//                        }
+//                ).toList()
+//                .stream().limit(3)
+//                .toList();
 
         // Imprimir as saudações geradas usando o method reference (sugerido pela IDE)
-        listaSaudacoes.forEach(System.out::println);
+//        listaSaudacoes.forEach(System.out::println);
     }
 
 }
